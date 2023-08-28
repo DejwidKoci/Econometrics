@@ -22,7 +22,7 @@ plt.figure(figsize=(12, 6))
 plt.scatter(X['X2'], y, alpha=0.7)
 plt.title("Scatter Plot of Y vs. X2")
 plt.xlabel("Power of engine in hp [X2]")
-plt.ylabel("Car prise in zł [Y]")
+plt.ylabel("Car prise in PLN [Y]")
 plt.grid(True)
 plt.show()
 
