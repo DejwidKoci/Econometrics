@@ -2,7 +2,7 @@ import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
-data = pd.read_excel("data.xlsx", sheet_name='dane_01')
+data = pd.read_excel("data.xlsx", sheet_name='dane_02')
 y = data['Y']
 X = data[['X']]
 X = sm.add_constant(X)
