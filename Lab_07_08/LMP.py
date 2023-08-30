@@ -27,3 +27,8 @@ X_star = data[['X0*','X1*','X2*','X3*']]
 model_lmp = sm.OLS(Y_star, X_star).fit()
 print(model_lmp.summary())
 
+print()
+print("INTERPRETACJE WYNIKÓW")
+print("Każdy zyskany dodatkowy punkt z kolokwium z matematyki powodował wzrost studentów, którzy zdali egzamin o 0,005")
+print("Wzrost liczby absencji o 1h powodował spadek studentów, którzy zdali egzamin o 0,11")
+print("Każdy dodatkowy bdb nauczycieli powodował wzrost studentów, którzy zdali egzamin o 0,16")
