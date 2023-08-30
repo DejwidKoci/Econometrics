@@ -1,12 +1,10 @@
 import pandas as pd
 import statsmodels.api as sm
+
 data = pd.read_excel('data_03.xlsx', sheet_name = 'dane')
 
 Y1 = data['y1t']
 Y2 = data['y2t']
-Z1 = data['z1t']
-Z2 = data['z2t']
-Z3 = data['z3t']
 Z = data[['z1t', 'z2t', 'z3t']]
 
 
