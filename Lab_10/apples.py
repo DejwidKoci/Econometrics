@@ -18,7 +18,7 @@ print("a: ", np.exp(model_01.params['const']))
 print("b: ", model_01.params['X_real'])
 print()
 print("INTERPRETACJE: ")
-print(f"Wzrost miesięcznych dochodów o 1% powoduje wzrost miesięcznego spożycia jabłek o {model_01.params['X_real']}% ")
+print(f"Wzrost miesięcznych dochodów o 1% powoduje wzrost miesięcznego spożycia jabłek o {round(model_01.params['X_real'], 2)}% ")
 
 flexibility = pd.DataFrame({
     "x": data['X_real'],

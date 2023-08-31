@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 data = pd.read_excel('owoce.xlsx', sheet_name = 'Dane')
 
 # power model
-Y1 = np.log(data['cytrusowe'])
+Y1 = np.log(data['jagodowe'])
 X1 = np.log(data['X_real'])
 X1 = sm.add_constant(X1)
 
@@ -18,7 +18,7 @@ print("a: ", np.exp(model_01.params['const']))
 print("b: ", model_01.params['X_real'])
 print()
 print("INTERPRETACJE: ")
-print(f"Wzrost miesięcznych dochodów o 1% powoduje wzrost miesięcznego spożycia owoców cyrusowych o {round(model_01.params['X_real'], 2)}% ")
+print(f"Wzrost miesięcznych dochodów o 1% powoduje wzrost miesięcznego spożycia owoców jagodowych o {round(model_01.params['X_real'], 2)}% ")
 
 flexibility = pd.DataFrame({
     "x": data['X_real'],
@@ -30,7 +30,7 @@ print(flexibility)
 
 y_predicted = np.exp(model_01.params['const']) * data['X_real'] ** model_01.params['X_real']
 plt.figure(figsize = (10, 6))
-plt.scatter(data['X_real'], data['cytrusowe'], label = 'Y', marker = 'o')
+plt.scatter(data['X_real'], data['jagodowe'], label = 'Y', marker = 'o')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title("Linearyzacja modelu potęgowego")
@@ -56,8 +56,8 @@ print("b: ", model_02.params['X_real'])
 print("Poziom nasycenia: ", saturation)
 print()
 print("INTERPRETACJE: ")
-print(f"Wraz ze wzrostem dochodów zwiększało się spożycie owoców cytrusowych ale nie przekraczały one {round(saturation, 2)}%")
-print(f"Na początku wraz ze wzrostem dochodów zwiększało się spożycie owoców cytrusowych w przyspieszonym tempie po czym po przekroczeniu dochodów na poziomie {round(vertex, 2)} spożycie owoców zaczeły wzrastać wolniej")
+print(f"Wraz ze wzrostem dochodów zwiększało się spożycie owoców jagodowych ale nie przekraczały one {round(saturation, 2)}%")
+print(f"Na początku wraz ze wzrostem dochodów zwiększało się spożycie owoców jagodowych w przyspieszonym tempie po czym po przekroczeniu dochodów na poziomie {round(vertex, 2)} spożycie owoców zaczeły wzrastać wolniej")
 
 flexibility = pd.DataFrame({
     "x": data['X_real'],
@@ -71,7 +71,7 @@ print(flexibility)
 
 y_predicted = np.exp(model_02.params['const'] + model_02.params['X_real'] / data['X_real'])
 plt.figure(figsize = (10, 6))
-plt.scatter(data['X_real'], data['cytrusowe'], label = 'Y', marker = 'o')
+plt.scatter(data['X_real'], data['jagodowe'], label = 'Y', marker = 'o')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title("Linearyzacja modelu wykładniczego z odwrotnością")
@@ -81,7 +81,7 @@ plt.show()
 
 # Tornqvist
 # y = ax / (b + x)
-Y3 = 1 / data['cytrusowe']
+Y3 = 1 / data['jagodowe']
 X3 = 1 / data['X_real']
 X3 = sm.add_constant(X3)
 
@@ -96,7 +96,7 @@ print("a (poziom nasycenia): ", a)
 print("b: ", b)
 print()
 print("INTERPRETACJE: ")
-print(f"Wraz ze wzrostem dochodów zwiększało się spożycie owoców cytrusowych ale nie przekraczały {round(a, 2)}%")
+print(f"Wraz ze wzrostem dochodów zwiększało się spożycie owoców jagodowych ale nie przekraczały {round(a, 2)}%")
 
 flexibility = pd.DataFrame({
     "x": data['X_real'],
@@ -108,7 +108,7 @@ print(flexibility)
 
 y_predicted = a * data['X_real']/(b + data['X_real'])
 plt.figure(figsize = (10, 6))
-plt.scatter(data['X_real'], data['cytrusowe'], label = 'Y', marker = 'o')
+plt.scatter(data['X_real'], data['jagodowe'], label = 'Y', marker = 'o')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title("Linearyzacja modelu Tornqvista")
