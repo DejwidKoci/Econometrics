@@ -58,4 +58,9 @@ dffits_threshold = 2 * ((model.df_model + 1) / nobs)**0.5
 outliers_dffits = influence_summary[abs(dffits) > dffits_threshold]
 print(outliers_dffits)
 
+print()
+print("Obserwacje dźwigniowe:")
+leverage_obs = influence_summary[leverage > 2 * (model.df_model + 1) / nobs]
+print(leverage_obs)
+
 
