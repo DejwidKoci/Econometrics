@@ -16,9 +16,17 @@ print()
 print("Współczynniki funkcji potęgowej  y = a * x ** b")
 print("a (poziom nasycenia): ", np.exp(model_01.params['const']))
 print("b: ", model_01.params['x'])
+print()
 print("INTERPRETACJE: ")
 print("Wzrost miesięcznych dochodów o 1% powoduje wzrost miesięcznych wydatków na warzywa i ich przetwory o 0.58%")
+
+flexibility = pd.DataFrame({
+    "x": data['x'],
+    "Elastyczność": model_01.params['x']
+})
 print()
+print("ELASTYCZNOŚCI: ")
+print(flexibility)
 
 y_predicted = np.exp(model_01.params['const']) * data['x'] ** model_01.params['x']
 plt.figure(figsize = (10, 6))
@@ -45,10 +53,20 @@ print()
 print("Współczynniki funkcji wykładniczej z odwrotnością  y = exp(a - b/x)")
 print("a (poziom nasycenia): ", saturation)
 print("b: ", vertex)
+print()
 print("INTERPRETACJE: ")
 print(f"Wraz ze wzrostem dochodów zwiększały się wydatki na warzywa ale nie przekraczały {round(saturation, 2)}%")
 print(f"Na początku wraz ze wzrostem dochodów zwiększały się wydatki na warzywa w przyspieszonym tempie po czym po przekroczeniu dochodów na poziomie {round(vertex, 2)} dochody zaczeły wzrastać wolniej")
+
+flexibility = pd.DataFrame({
+    "x": data['x'],
+    "Elastyczność": -model_02.params['x'] / data['x']
+})
 print()
+print("ELASTYCZNOŚCI: ")
+print(flexibility)
+
+
 
 y_predicted = np.exp(model_02.params['const'] + model_02.params['x'] / data['x'])
 plt.figure(figsize = (10, 6))
@@ -76,6 +94,15 @@ print()
 print("Współczynniki funkcji Tornqvista y = ax / (b + x)")
 print("a (poziom nasycenia): ", a)
 print("b: ", b)
+
+flexibility = pd.DataFrame({
+    "x": data['x'],
+    "Elastyczność": model_03.params['x'] / (model_03.params['x'] + data['x'])
+})
+print()
+print("ELASTYCZNOŚCI: ")
+print(flexibility)
+
 y_predicted = a * data['x']/(b + data['x'])
 plt.figure(figsize = (10, 6))
 plt.scatter(data['x'], data['y'], label = 'Y', marker = 'o')
