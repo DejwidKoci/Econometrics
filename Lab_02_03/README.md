@@ -46,7 +46,7 @@ An auxiliary model is used to verify the hypothesis:
 The testing procedure in this case is as follows:
 1. We estimate MNK the parameters of the basic model and the parameters of the extended model. Let us denote the residuals in the basic model by $e_i$ and the residuals in the extended model by $u_i$.
 2. We calculate the empirical value of the F-statistic defined as follows:
-3. With the null hypothesis being true, the F statistic has an F - Snedecor distribution with $m1 = p$ and $m2 = n - k - 1 - p$ degrees of freedom.
+3. With the null hypothesis being true, the F statistic has an F - Snedecor distribution with $m_1 = p$ and $m_2 = n - k - 1 - p$ degrees of freedom.
 4. For a given level of significance and for the number of degrees of freedom $m1 = p$ and $m2 = n - k - 1 - p$, we read the critical value of $F$ from the tables. If $F$ $>$ $F*$ then hypothesis $H_0$ is rejected. On the other hand, if $F$ $≤$ $F^*$ then we have no grounds to reject hypothesis $H_0$.
 
 
