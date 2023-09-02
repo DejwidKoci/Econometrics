@@ -1,13 +1,22 @@
-# Econometrics
-This project includes exercises that were conducted during econometrics classes. They cover the following topics:
+# Econometrics 
 
--Examination of outlier observations,
--Investigation of instrumental variables (Hausman, Sargan, and weak instruments tests),
--Estimation of simple, recursive, multivariate, and simultaneous equation models,
--Construction of segmented models and models based on qualitative explanatory variables,
--Construction of logit and probit models,
--Development of nonlinear models (power, exponential, logarithmic),
--Building demand and production function models,
--Study of Tornqvist type I, II, and III functions.
+Welcome to our econometrics exercise project! Here, you'll find a collection of exercises that were conducted during our econometrics classes. These exercises cover a wide range of topics, including:
 
-These tasks make use of modules such as pandas, scipy, numpy, matplotlib, and statmodels.
+- Exploring outlier observations
+- Investigating instrumental variables (Hausman, Sargan, and weak instruments tests)
+- Estimating simple, recursive, multivariate, and simultaneous equation models
+- Constructing segmented models and models based on qualitative explanatory variables
+- Creating logit and probit models
+- Developing various types of nonlinear models (power, exponential, logarithmic)
+- Building demand and production function models
+- Analyzing Tornqvist type I, II, and III functions
+
+We've leveraged a variety of Python modules to complete these tasks, including:
+
+- pandas
+- scipy
+- numpy
+- matplotlib
+- statmodels
+
+
