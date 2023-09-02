@@ -17,6 +17,6 @@ We've leveraged a variety of Python modules to complete these tasks, including:
 - scipy
 - numpy
 - matplotlib
-- statmodels
+- statsmodels
 
 
