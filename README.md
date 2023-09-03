@@ -1,6 +1,6 @@
 # Econometrics 
 
-Welcome to our econometrics exercise project! Here, you'll find a collection of exercises that were conducted during my econometrics classes. These exercises cover a wide range of topics, including:
+Welcome to econometrics exercise project! Here, you'll find a collection of exercises that were conducted during my econometrics classes. These exercises cover a wide range of topics, including:
 
 - Exploring outlier observations
 - Investigating instrumental variables (Hausman, Sargan, and weak instruments tests)
