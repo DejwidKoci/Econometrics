@@ -6,7 +6,9 @@ Macroeconomic demand functions measure demand for the population in a larger are
 - the price of the good in question and other goods
 
 
-Here we used this function to describe average monthly fruit consumption (apples.py, berries.py, citrus.py, dried.py) on average monthly real income 
+Here we used this functions to describe average monthly consumption of vegetables, fruit, cabanas and fish (apples.py, berries.py, citrus.py, dried.py, vegetables.py, kabanos.py, fish.py) on average monthly real income.
+
+
 
 # Functions Describing The Dependence of Demand on Income
 Functions are most commonly used to approximate Engel curves:
