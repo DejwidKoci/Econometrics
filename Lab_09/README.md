@@ -1,12 +1,12 @@
-In this python's files we build unlinear models and create interpretations of the coefficients of this models.
-
 # Unlinear models
 It follows from economic theory that relationships economic relationships are often not linear.
 With regard to the methods of parameter estimation of non-linear models, a distinction is made between:
 1) models that are non-linear with respect to the variables, butlinear with respect to the parameters,
 2) models that are non-linear with respect to the variables and parameters, but which can be reduced to
 linear models by appropriate transformations (linearisable models),
-3) non-linear in the strict sense (models, which cannot be linearised).
+3) non-linear in the strict sense (models, which cannot be linearised).  
+
+In this python's files we build these unlinear models and create interpretations of the coefficients of this models.
 
 
 # Estimation of linear models against parameters
