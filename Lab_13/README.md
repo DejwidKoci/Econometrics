@@ -1,4 +1,6 @@
 # Cobb-Duglas Function
+Here we build models using the Cobb-Duglas function. We interpret the elasticity indices, the parameters of the function and examine the degree of homogeneity of the function.  
+
 This is one of the typical functions used in econometric production analysis.  
 It has the form:
 $$f(x_1, x_2) = b_0 \cdot x_1^{b_1} \cdot x_2^{b_2} \cdot exp(\epsilon) $$
